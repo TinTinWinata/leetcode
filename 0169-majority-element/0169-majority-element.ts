@@ -16,7 +16,6 @@ function majorityElement(nums: number[]): number {
                 max = map[num];
             }
         }
-        console.log('Map : ', map)
     }
     return result;
 };
