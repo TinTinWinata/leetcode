@@ -25,7 +25,6 @@ function convert(s: string, numRows: number): string {
      
     }
     let result = ''
-    console.log(arr)
     for(let i=0;i<yMax;i++){
         for(let j=0;j<xMax;j++){
             if(arr[j][i] !== '') result += arr[j][i]
