@@ -38,7 +38,6 @@ var canFinish = function(numCourses, prerequisites) {
             map[key] = [value];
         }
     }
-    console.log(`map : `, map)
     for(const [key, value] in map){
         console.log('Checking on ', key, value)
         if(!recrusive([], key, map)) return false;
