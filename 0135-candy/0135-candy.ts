@@ -46,7 +46,6 @@ function candy(ratings: number[]): number {
             lastIndex = i + 1;
         }    
     }
-    console.log('Left to right : ', leftToRight)
     
     for(let i=ratings.length - 1;i>=0;i--){
         
@@ -65,8 +64,6 @@ function candy(ratings: number[]): number {
             lastIndex = i - 1;
         }    
     }
-    
-    console.log('After: ', leftToRight)
     
     let res = 0;
     for(let i=0;i<leftToRight.length;i++){
