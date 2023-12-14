@@ -2,13 +2,13 @@ function onesMinusZeros(grid: number[][]): number[][] {
     const n = grid.length;
     const m = grid[0].length;
     const newGrid = (new Array(n).fill(-1)).map(()=>new Array(m).fill(-1))
-    const map = new Map();
+    const dp = new Map();
     
     function search(coor, tobe, isRow){
         let res = 0;
         const key = `${coor}#${tobe}#${isRow}`
-        if(map.has(key)){
-            return map.get(key);
+        if(dp.has(key)){
+            return dp.get(key);
         }
         if(isRow){
             for(let i=0;i<m;i++){
@@ -23,7 +23,7 @@ function onesMinusZeros(grid: number[][]): number[][] {
                 }
             }
         }
-        map.set(key, res);
+        dp.set(key, res);
         return res;
     }
 
